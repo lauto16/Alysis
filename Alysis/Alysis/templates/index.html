@@ -8,8 +8,26 @@
     <title>Alysis</title>
 </head>
 <body>
-
     <div class="container">
+        <div id=new-data-set-modal>
+            <div id="new-data-set-modal-close">
+                <button id="new-data-set-modal-close-x">
+                    <strong>X</strong>
+                </button>
+            </div>
+            <p id="new-data-set-modal-title">New data set</p>
+            <form id="new-data-set-modal-form">
+                {% csrf_token %}
+                <input type="text" name="new-data-set-name" placeholder="Data set's name">
+
+                <!--whenever user presses 'add-new-row' button, a new data-input appears below, 
+                    it's id will be 'data-input-n' and it's name 'data-n'-->
+                <input type="text" name="data-0" id=data-input-0>
+
+                <button id="add-new-row">+</button>
+                <button id=send-new-data-set>Create</button>
+            </form>
+        </div>
         <header>
             <div id="title-div">
                 <h1 id="title-h1">Alysis</h1>

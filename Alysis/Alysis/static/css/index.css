@@ -90,3 +90,7 @@ body {
 #new-data-set-button:hover{
     opacity: 0.7;
 }
+
+#new-data-set-modal{
+    margin-top: 100px;
+}
