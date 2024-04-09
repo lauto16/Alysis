@@ -1,6 +1,7 @@
 const new_data_set_button = document.getElementById('new-data-set-button')
 
 //new data set form
+const new_data_set_modal = document.getElementById('new-data-set-modal')
 const new_data_set_modal_form = document.getElementById('new-data-set-modal-form')
 const add_new_row_button = document.getElementById('add-new-row')
 const send_new_data_set = document.getElementById('send-new-data-set')
@@ -56,13 +57,13 @@ function sendFormData(data) {
 }
 
 
-function openDataSetModal(data) {
-	//
+function openModal(modal) {
+	modal.style.display = 'block'
 }
 
 
 new_data_set_button.addEventListener('click', function(e) {
-	openDataSetModal()
+	openModal(new_data_set_modal)
 })
 
 add_new_row_button.addEventListener('click', function(e) {

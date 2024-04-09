@@ -9,6 +9,7 @@
 </head>
 <body>
     <div class="container">
+        <!--modals-->
         <div id=new-data-set-modal>
             <div id="new-data-set-modal-close">
                 <button id="new-data-set-modal-close-x">
@@ -17,15 +18,24 @@
             </div>
             <p id="new-data-set-modal-title">New data set</p>
             <form id="new-data-set-modal-form">
-                {% csrf_token %}
-                <input type="text" name="new-data-set-name" placeholder="Data set's name">
+                <div id="new-data-set-modal-form-container">
+                            
+                    {% csrf_token %}
+                    <div class="centered-input-div">
+                        <input type="text" name="new-data-set-name" placeholder="Data set's name" class="data-set-name-input">
+                    </div>
+                    <!--whenever user presses 'add-new-row' button, a new data-input appears below, 
+                        it's id will be 'data-input-n' and it's name 'data-n'-->
+                    <div id="new-data-append">                    
+                        <input type="text" name="data-0" id="data-input-0" class="data-input">
+                        <button id="add-new-row">+</button>
+                    </div>
+                    <div class="centered-input-div">
+                        <button id=send-new-data-set>Create</button>
+                    </div>
 
-                <!--whenever user presses 'add-new-row' button, a new data-input appears below, 
-                    it's id will be 'data-input-n' and it's name 'data-n'-->
-                <input type="text" name="data-0" id=data-input-0>
+                </div>
 
-                <button id="add-new-row">+</button>
-                <button id=send-new-data-set>Create</button>
             </form>
         </div>
         <header>
