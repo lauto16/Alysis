@@ -24,10 +24,11 @@
                     <div class="centered-input-div">
                         <input type="text" name="new-data-set-name" placeholder="Data set's name" class="data-set-name-input">
                     </div>
-                    <!--whenever user presses 'add-new-row' button, a new data-input appears below, 
-                        it's id will be 'data-input-n' and it's name 'data-n'-->
+                    <p id=p-info>If you want to delete a data row just keep it empty!</p>
                     <div id="new-data-append">                    
-                        <input type="text" name="data-0" id="data-input-0" class="data-input">
+                        <input type="text" name="data-0" id="data-input_0" class="data-input" placeholder="Data">
+                    </div>
+                    <div class="centered-input-div">
                         <button id="add-new-row">+</button>
                     </div>
                     <div class="centered-input-div">
@@ -58,4 +59,7 @@
 </body>
 <script src="{% static 'js/jquery.js' %}"></script>
 <script src="{% static 'js/index.js' %}"></script>
+<script type="text/javascript">
+
+</script>
 </html>

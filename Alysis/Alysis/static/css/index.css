@@ -95,15 +95,15 @@ body {
     display: none;
     z-index: 1;
     width: 42%;
-    height: 50%;
+    height: 90%;
     position: absolute;
     left: 50%;
-    top: 40%;
+    top: 50%;
     transform: translate(-50%, -50%);
     max-height: 100%;
     overflow-y: auto;
     background-color: #ffffff;
-    border: 1px solid #231f4b;
+    border: 1px solid #dedede;
 }
 
 #new-data-set-modal-close{
@@ -148,30 +148,33 @@ body {
 }
 
 #new-data-append{
-    display: inline-flex;
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
+    display: block;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .data-input{
-    width: 80%;
-    height: 35px;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 20px;
     font-size: 13px;
     padding: 5px 10px;
     outline: none;
     background: #ffffff;
-    color: #000000;
-    border: 1px solid #4f7d96;
-    border-radius: 5px;
+    color: #4b5152;
+    border: 1px solid #35c9d4;
+    border-radius: 2px;
     box-shadow: 3px 3px 2px 0px #e2e2e2;
     transition: .3s ease;
+    margin-top: 5px;
+    margin-bottom: 5px;
     text-align: center;
 }
 
 .data-input:focus {
     background: #f2f2f2;
-    border: 1px solid #5a7ac7;
     border-radius: 10px;
 }
 
@@ -181,8 +184,22 @@ body {
 
 
 #add-new-row{
-    width: 20%;
+    width: 100%;
     height: 35px;
+    color: #ffffff;
+    background-color: #35c9d4;
+    outline: 0;
+    border: 0;
+    font-size: 20px;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px 0px #e2e2e2;
+    transition: ease opacity 0.2s;
+    cursor: pointer;
+}
+
+#add-new-row:hover{
+    opacity: 0.7;
 }
 
 #new-data-set-modal-form{
@@ -192,16 +209,14 @@ body {
 }
 
 .data-set-name-input{
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 100%;
     height: 35px;
     font-size: 13px;
     padding: 5px 10px;
     outline: none;
     background: #ffffff;
-    color: #000000;
-    border: 1px solid #4f7d96;
+    color: #4b5152;
+    border: 1px solid #35c9d4;
     border-radius: 5px;
     box-shadow: 3px 3px 2px 0px #e2e2e2;
     transition: .3s ease;
@@ -209,7 +224,6 @@ body {
 
 .data-set-name-input:focus {
     background: #f2f2f2;
-    border: 1px solid #5a7ac7;
     border-radius: 10px;
 }
 
@@ -218,7 +232,21 @@ body {
 }
 
 #send-new-data-set{
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
+    width: 100%;
+    height: 35px;
+    color: #ffffff;
+    background-color: #35c9d4;
+    outline: 0;
+    border: 0;
+    font-size: 15px;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px 0px #e2e2e2;
+    transition: ease opacity 0.2s;
+    cursor: pointer;
+}
+
+#p-info{
+    text-align: center;
+    color: #838485;
 }
