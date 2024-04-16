@@ -25,17 +25,16 @@ function getCookie(name) {
 }
 
 
-function sendFormData(data) {
-	console.log(data)
+function sendFormData(form) {
+	var form_data = new FormData(form)
+
 	let requestOptions = {
 
 		method: 'POST',
 		headers: {
-			'Content-Type': 'application/json',
 			"X-CSRFToken": getCookie('csrftoken'),
 		},
-		// send 
-		body: data
+		body: form_data
 	}
 
 	fetch('./', requestOptions)
@@ -140,16 +139,11 @@ add_new_row_button.addEventListener('keyup', function(e) {
 // send the data to the server
 new_data_set_modal_form.addEventListener('submit', function(e) {
 	e.preventDefault()
-	let data = JSON.stringify({
-		action: 'new_data_set',
+	let formData = new FormData(this);
 
-		//this should later contain a list with all the data 
-		data: '10'
+	sendFormData(new_data_set_modal_form)
 
-	})
-	sendFormData(data)
 	new_data_set_modal_form.reset()
-
 	deleteElements(class_name='data-input', except_id='data-input_0')
 
 	closeModal(new_data_set_modal)
