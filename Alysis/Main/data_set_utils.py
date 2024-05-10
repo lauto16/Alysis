@@ -1,3 +1,8 @@
+
+# HACER VALIDACION PARA QUE NO HAYA SIMBOLOS & EN EL DATASET, YA QUE ESTOS SEPARARAN EL CSV
+# CREAR LOGIN REGISTER
+# CREAR UN METODO QUE CREE EL REGISTRO DE LA BD Y EL CSV. QUE EL NOMBRE DE LOS CSV SEAN ID_NOMBRE DE USUARIO_NUMERO-DE-DATASET
+
 class DataSet():
     def __init__(self, name: str, values: dict, owner):
         """
@@ -9,12 +14,14 @@ class DataSet():
         self.is_numeric(bool):
             If True -> all the values from the dataset can be converted to float
             If False -> there's at least one value that can't be converted to float.
+        self.values_len(int): An integer representing the amount of values on the dataset.
         """
 
         self.name = name
         self.values = self.getValues(values)
         self.owner = owner
         self.is_numeric = self.isNumeric(self.values)
+        self.values_len = len(self.values)
 
     def getValues(self, values: dict) -> list:
         """
